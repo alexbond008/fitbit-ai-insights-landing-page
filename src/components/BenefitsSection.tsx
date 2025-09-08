@@ -54,7 +54,6 @@ const BenefitsSection = () => {
                   
                   <div className="space-y-2">
                     <h3 className="text-lg font-semibold flex items-center gap-2">
-                      <span className="text-secondary">✅</span>
                       {benefit.title}
                     </h3>
                     <p className="text-muted-foreground">{benefit.description}</p>

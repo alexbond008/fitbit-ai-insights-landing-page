@@ -24,7 +24,7 @@ const HeroSection = () => {
             
             <div className="flex flex-col gap-4 sm:flex-row justify-center">
               <Button variant="hero" size="lg" className="animate-pulse-glow">
-                🔵 Join Early Access
+                Join Early Access
               </Button>
               <Button variant="outline" size="lg">
                 Learn More
