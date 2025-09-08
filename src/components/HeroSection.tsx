@@ -23,10 +23,19 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-col gap-4 sm:flex-row justify-center">
-              <Button variant="hero" size="lg" className="animate-pulse-glow">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="animate-pulse-glow"
+                onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Join Early Access
               </Button>
-              <Button variant="outline" size="lg">
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Learn More
               </Button>
             </div>

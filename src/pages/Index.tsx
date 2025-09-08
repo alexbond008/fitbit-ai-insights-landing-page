@@ -2,7 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ExampleUseCasesSection from "@/components/ExampleUseCasesSection";
-import CTASection from "@/components/CTASection";
+import WaitlistSection from "@/components/WaitlistSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -12,7 +12,7 @@ const Index = () => {
       <HowItWorksSection />
       <BenefitsSection />
       <ExampleUseCasesSection />
-      <CTASection />
+      <WaitlistSection />
       <Footer />
     </div>
   );
