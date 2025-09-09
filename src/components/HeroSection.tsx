@@ -6,8 +6,8 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="container mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="animate-fade-up space-y-8">
-            <div className="space-y-6">
+          <div className="space-y-8">
+            <div className="space-y-6 animate-fade-up">
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
                   Understand
@@ -26,7 +26,7 @@ const HeroSection = () => {
               <Button 
                 variant="hero" 
                 size="lg" 
-                className="animate-pulse-glow"
+                className="cursor-pointer"
                 onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Join Early Access
@@ -34,6 +34,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="lg"
+                className="cursor-pointer"
                 onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Learn More
