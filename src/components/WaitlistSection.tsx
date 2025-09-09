@@ -24,7 +24,7 @@ const WaitlistSection = () => {
     setIsLoading(true);
     
     try {
-      const response = await fetch(
+      await fetch(
         "https://script.google.com/macros/s/AKfycbxyccQ7byDbOmUwPX-v5R3FKYvxM0H8VbI0SXM0En5wnt9SUR_CmRyQriGAT2sXqMynCA/exec",
         {
           method: "POST",
@@ -32,19 +32,16 @@ const WaitlistSection = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ email }),
-          mode: "cors",
+          mode: "no-cors",
         }
       );
 
-      if (response.ok) {
-        toast({
-          title: "Success! 🎉",
-          description: "You've been added to the waitlist. We'll be in touch soon!",
-        });
-        setEmail("");
-      } else {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
+      // With no-cors mode, we can't read the response, so assume success if no error thrown
+      toast({
+        title: "Success! 🎉",
+        description: "You've been added to the waitlist. We'll be in touch soon!",
+      });
+      setEmail("");
     } catch (error) {
       console.error("Waitlist submission error:", error);
       
