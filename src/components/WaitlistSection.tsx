@@ -32,6 +32,7 @@ const WaitlistSection = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ email }),
+          mode: "cors",
         }
       );
 
@@ -42,14 +43,24 @@ const WaitlistSection = () => {
         });
         setEmail("");
       } else {
-        throw new Error("Failed to join waitlist");
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
     } catch (error) {
-      toast({
-        title: "Something went wrong",
-        description: "Please try again later or contact support",
-        variant: "destructive",
-      });
+      console.error("Waitlist submission error:", error);
+      
+      if (error instanceof TypeError && error.message.includes("fetch")) {
+        toast({
+          title: "Connection Error",
+          description: "Unable to connect. Make sure your Google Apps Script is deployed as a web app with public access.",
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Something went wrong",
+          description: "Please try again later or contact support",
+          variant: "destructive",
+        });
+      }
     } finally {
       setIsLoading(false);
     }
