@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-hero py-20 lg:py-32">
@@ -18,6 +20,16 @@ const HeroSection = () => {
               <p className="text-xl text-muted-foreground lg:text-2xl max-w-3xl mx-auto">
                 Your Fitbit collects the numbers. Our AI coach explains what they mean — and how to improve them.
               </p>
+            </div>
+            
+            <div className="flex justify-center">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Join the Waitlist
+              </Button>
             </div>
             
             <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
