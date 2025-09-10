@@ -1,3 +1,5 @@
+import healthcoachLogo from "@/assets/healthcoach-logo.png";
+
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-hero py-20 lg:py-32">
@@ -6,6 +8,13 @@ const HeroSection = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="space-y-8">
             <div className="space-y-6 animate-fade-up">
+              <div className="flex justify-center mb-8">
+                <img 
+                  src={healthcoachLogo} 
+                  alt="HealthCoach AI" 
+                  className="h-16 w-auto lg:h-20"
+                />
+              </div>
               <h1 className="text-5xl font-bold tracking-tight sm:text-7xl lg:text-8xl">
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
                   Understand
