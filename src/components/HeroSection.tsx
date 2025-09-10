@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-hero py-20 lg:py-32">
@@ -8,7 +6,7 @@ const HeroSection = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="space-y-8">
             <div className="space-y-6 animate-fade-up">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+              <h1 className="text-5xl font-bold tracking-tight sm:text-7xl lg:text-8xl">
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
                   Understand
                 </span>{" "}
@@ -20,27 +18,6 @@ const HeroSection = () => {
               <p className="text-xl text-muted-foreground lg:text-2xl max-w-3xl mx-auto">
                 Your Fitbit collects the numbers. Our AI coach explains what they mean — and how to improve them.
               </p>
-            </div>
-            
-            <div className="flex justify-center">
-              <Button 
-                variant="hero" 
-                size="lg" 
-                onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Join the Waitlist
-              </Button>
-            </div>
-            
-            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-secondary animate-pulse"></div>
-                <span>Free during beta</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-secondary animate-pulse"></div>
-                <span>Works with Fitbit</span>
-              </div>
             </div>
           </div>
         </div>
