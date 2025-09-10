@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-hero py-20 lg:py-32">
@@ -20,25 +18,6 @@ const HeroSection = () => {
               <p className="text-xl text-muted-foreground lg:text-2xl max-w-3xl mx-auto">
                 Your Fitbit collects the numbers. Our AI coach explains what they mean — and how to improve them.
               </p>
-            </div>
-            
-            <div className="flex flex-col gap-4 sm:flex-row justify-center">
-              <Button 
-                variant="hero" 
-                size="lg" 
-                className="cursor-pointer"
-                onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Join Early Access
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="cursor-pointer"
-                onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Learn More
-              </Button>
             </div>
             
             <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
