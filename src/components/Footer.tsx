@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="pt-6 border-t">
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
               <p className="text-sm text-muted-foreground">
-                © 2024 HealthCoach AI. All rights reserved.
+                © 2025 HealthCoach AI. All rights reserved.
               </p>
               
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
